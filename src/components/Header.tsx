@@ -16,8 +16,8 @@ export const Header: React.FC<HeaderProps> = ({
   cleanPath,
 }) => {
   return (
-    <header className="sticky top-0 z-40 bg-neutral-950/90 backdrop-blur-md border-b border-neutral-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-8">
+    <header className="sticky top-0 z-40 bg-neutral-950/90 backdrop-blur-md border-b border-neutral-800 w-full">
+      <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14 h-16 flex items-center justify-between gap-8">
         {/* Zone 1: Brand Wordmark (Single text element) */}
         <a 
           href="#top" 

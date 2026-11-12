@@ -15,7 +15,7 @@ export const SafetyMatrix: React.FC = () => {
         <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
           Comprehensive Anti-Cheat &amp; Account Safety Audit
         </h2>
-        <p className="text-sm text-neutral-300 leading-relaxed max-w-3xl">
+        <p className="text-sm text-neutral-300 leading-relaxed w-full">
           Formula 1 titles on PC utilize EA Anti-Cheat (EAAC) at Ring 0 (kernel level), combined with EA Racenet cloud entitlement validation. Here is the exact technical analysis of how our dual-install isolation protects your account from bans and save corruption.
         </p>
       </div>

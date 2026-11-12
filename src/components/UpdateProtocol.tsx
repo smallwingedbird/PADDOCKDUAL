@@ -35,7 +35,7 @@ export const UpdateProtocol: React.FC<UpdateProtocolProps> = ({ config }) => {
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
               How to Handle EA Game Updates Safely
             </h2>
-            <p className="text-sm text-neutral-300 leading-relaxed max-w-3xl">
+            <p className="text-sm text-neutral-300 leading-relaxed w-full">
               When EA releases a Title Update or season patch, follow this 4-step protocol to keep both copies in working order without breaking mods or AntiCheat.
             </p>
           </div>
@@ -91,7 +91,7 @@ export const UpdateProtocol: React.FC<UpdateProtocolProps> = ({ config }) => {
           <Sliders className="w-5 h-5 text-red-400" />
           <h3>Migrating Force Feedback &amp; Button Mappings to New Windows User</h3>
         </div>
-        <p className="text-xs text-neutral-300 leading-relaxed max-w-3xl">
+        <p className="text-xs text-neutral-300 leading-relaxed w-full">
           Wheel hardware drivers (Fanatec, Logitech G HUB, Thrustmaster, Simucube) run system-wide across all Windows accounts. However, your in-game button mappings and force feedback calibration reside in <code className="text-neutral-200">hardware_settings_config.xml</code>.
         </p>
 

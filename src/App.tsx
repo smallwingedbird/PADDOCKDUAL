@@ -35,7 +35,7 @@ export default function App() {
       />
 
       {/* Main Container */}
-      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+      <main className="flex-1 w-full px-4 sm:px-6 lg:px-10 xl:px-14 py-8 space-y-8">
         {/* Hero Context Visual Card */}
         <div className="relative rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-900 shadow-xl">
           <div className="relative h-48 sm:h-64 w-full overflow-hidden bg-neutral-950">
@@ -198,8 +198,8 @@ export default function App() {
       />
 
       {/* Footer with Unboxed Metadata */}
-      <footer className="border-t border-neutral-800 bg-neutral-950 mt-16 py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500">
+      <footer className="border-t border-neutral-800 bg-neutral-950 mt-16 py-8 w-full">
+        <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500">
           <div className="flex items-center gap-2">
             <span className="font-semibold text-neutral-400">PaddockDual Setup Suite</span>
             <span aria-hidden="true">·</span>

@@ -65,7 +65,7 @@ export const OptionBWizard: React.FC<OptionBWizardProps> = ({
       {/* Top Banner / Setup Context */}
       <div className="bg-neutral-900/80 border border-neutral-800 rounded-2xl p-6 relative overflow-hidden">
         <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
-          <div className="space-y-2 max-w-2xl">
+          <div className="space-y-2 flex-1">
             <div className="flex items-center gap-2 text-xs font-semibold text-neutral-400">
               <span className="text-red-400 font-mono">OPTION B PROTOCOL</span>
               <span>·</span>

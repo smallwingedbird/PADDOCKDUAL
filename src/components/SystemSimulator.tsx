@@ -56,7 +56,7 @@ export const SystemSimulator: React.FC<SystemSimulatorProps> = ({ config }) => {
       {/* Simulation Controls Header */}
       <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6">
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
-          <div className="space-y-1 max-w-xl">
+          <div className="space-y-1 flex-1">
             <div className="flex items-center gap-2 text-xs font-mono text-red-400 font-semibold">
               <span>ISOLATION SANDBOX SIMULATOR</span>
               <span>·</span>
