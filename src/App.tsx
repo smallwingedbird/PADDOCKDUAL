@@ -15,6 +15,7 @@ import { SafetyMatrix } from './components/SafetyMatrix';
 import { UpdateProtocol } from './components/UpdateProtocol';
 import { GeminiTroubleshootModal } from './components/GeminiTroubleshootModal';
 import { ShieldCheck, HardDrive, User, Sliders, ExternalLink, Cpu, Sparkles } from 'lucide-react';
+import heroBgImage from './assets/images/f1_pitlane_split_1794432863533.jpg';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<ActiveTab>('wizard-option-b');
@@ -40,7 +41,7 @@ export default function App() {
           <div className="relative h-48 sm:h-64 w-full overflow-hidden bg-neutral-950">
             {imageLoaded ? (
               <img
-                src="/src/assets/images/f1_pitlane_split_1794432863533.jpg"
+                src={heroBgImage}
                 alt="F1 dual-install wind tunnel chassis"
                 referrerPolicy="no-referrer"
                 onError={() => setImageLoaded(false)}

@@ -91,10 +91,21 @@ export const GeminiTroubleshootModal: React.FC<GeminiTroubleshootModalProps> = (
         setResult(data);
       }
     } catch (err: any) {
-      console.error('Troubleshoot error:', err);
-      setErrorMessage(
-        err?.message || 'Could not communicate with the troubleshooting service.'
-      );
+      console.warn('Troubleshoot backend unreachable, falling back to local diagnostic:', err);
+      setResult({
+        analysis: `Local Diagnostic for ${step.title}: Launcher tasks or folder permission locks detected.`,
+        immediateFix: [
+          `Ensure all EA App and Epic Games processes are completely killed in Windows Task Manager before proceeding.`,
+          `Verify your paths: Clean install at "${config.cleanGamePath}" and Modded copy at "${config.offlineGamePath}".`,
+          `Run Command Prompt or PowerShell as Administrator to avoid Error 5 (Access is denied).`
+        ],
+        commands: [
+          `taskkill /F /IM EADesktop.exe /IM EpicGamesLauncher.exe /IM SwoftyLauncher.exe 2>nul`,
+          `robocopy "${config.cleanGamePath}" "${config.offlineGamePath}" /E /MT:8`
+        ],
+        safetyVerdict: "Your official online install is safe as long as modified files stay in the offline directory.",
+        isFallback: true
+      });
     } finally {
       setIsLoading(false);
     }

@@ -106,17 +106,42 @@
 
 ---
 
-## 🛠️ Build & Deployment
+## 🛠️ Build & Free Hosting Guide
 
-To compile for production:
+### Method 1: Render (Recommended for Full-Stack + Live Gemini AI) — 100% Free
+Render provides a free Web Service tier that runs Node.js + Express + Vite and keeps your server-side Gemini API key completely secure.
 
-```bash
-# Build Vite client and bundle assets
-npm run build
+1. Push your repository to **GitHub**.
+2. Sign in to [Render.com](https://render.com/) with your GitHub account.
+3. Click **New +** → **Web Service** → Select your repository.
+4. Configure these exact settings:
+   - **Environment**: `Node`
+   - **Build Command**: `npm install && npm run build`
+   - **Start Command**: `npm run start`
+   - **Plan Type**: `Free`
+5. Under **Environment Variables**, add:
+   - `GEMINI_API_KEY`: *(Your Google Gemini API Key from Google AI Studio)*
+   - `NODE_ENV`: `production`
+6. Click **Create Web Service**. Render will build and deploy your applet with a free HTTPS URL (`https://your-app.onrender.com`).
 
-# Start the full-stack server
-npm run start
-```
+---
+
+### Method 2: Vercel (Fastest Serverless Deployment) — 100% Free
+1. Sign in to [Vercel.com](https://vercel.com/) with your GitHub account.
+2. Click **Add New...** → **Project** → Import your repository.
+3. Framework Preset will auto-detect **Vite**.
+4. Set Build Command: `npm run build`, Output Directory: `dist`.
+5. Under **Environment Variables**, add `GEMINI_API_KEY`.
+6. Click **Deploy**. Vercel will deploy your site on global edge CDN with free automatic SSL.
+
+---
+
+### Method 3: GitHub Pages (Free Static Client Hosting)
+If you only need the client-side guides, scripts, sandboxes, and offline diagnostics:
+1. In `package.json`, add `"homepage": "https://<your-username>.github.io/<repo-name>"`
+2. In `vite.config.ts`, add `base: './'`
+3. Run `npm run build`
+4. In your GitHub repo: Go to **Settings** → **Pages** → Source: **Deploy from branch** → Branch: `main` (folder `/dist` or use the GitHub Actions Vite template).
 
 ---
 
